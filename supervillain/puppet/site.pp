@@ -1,5 +1,5 @@
 node default {
-    Exec { path => "/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/bin:/usr/local/sbin"}
+    Exec { path => '/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/bin:/usr/local/sbin'}
 
     # ensures proper ordering of provisioning
     stage { first: before => Stage[main] }
@@ -19,7 +19,7 @@ node default {
     include core::vim
     # include site::php-packages
     # include site::python-packages
-    include site::ruby-packages
+    include site::ruby_packages
     # include site::apache-vhosts
     # include site::apache-modules
     include destructor::base

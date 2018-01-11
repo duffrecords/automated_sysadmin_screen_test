@@ -1,9 +1,10 @@
 class core::ruby{
     $packageList = [
-        'build-essential',
+        'gcc',
+        'gcc-c++',
         'ruby',
         'rubygems',
-        'ruby1.9.1-dev'
+        'ruby-devel'
     ]
 
     package{ $packageList: }
