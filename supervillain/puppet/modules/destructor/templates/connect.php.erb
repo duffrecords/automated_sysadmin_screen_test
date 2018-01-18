@@ -1,0 +1,22 @@
+<?php
+$servername = "127.0.0.1";
+$dbname = "test2";
+$username = "<%= @test2_db_user %>";
+$password = "<%= @test2_db_password %>";
+
+echo "<html>\r\n";
+echo "    <body>\r\n";
+echo "        <div class=\"main-div\">\r\n";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Oops, there was an error.  Please try again later.\r\n");
+}
+echo "Database: Connected successfully\r\n";
+echo "        </div>\r\n";
+echo "    </body>\r\n";
+echo "</html>\r\n";
+?>

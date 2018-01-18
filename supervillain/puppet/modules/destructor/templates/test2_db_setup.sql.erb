@@ -1,0 +1,5 @@
+CREATE DATABASE IF NOT EXISTS test2;
+DROP USER '<%= @test2_db_user %>'@'localhost';
+CREATE USER '<%= @test2_db_user %>'@'localhost' identified by '<%= @test2_db_password %>';
+GRANT ALL PRIVILEGES ON test2.* to '<%= @test2_db_user %>'@'localhost';
+FLUSH PRIVILEGES;

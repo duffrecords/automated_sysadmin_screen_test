@@ -20,6 +20,7 @@ Vagrant.configure('2') do |config|
     puppet.options = '--verbose --debug'
   end
 
+  config.vm.network :forwarded_port, guest: 80, host: 80
   config.vm.provider :virtualbox do |v|
     # aws.access_key_id = AWS_CONFIG['access_key_id']
     # aws.secret_access_key = AWS_CONFIG['secret_access_key']

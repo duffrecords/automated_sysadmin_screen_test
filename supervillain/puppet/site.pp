@@ -7,6 +7,7 @@ node default {
 
     # add includes here
     include site::init
+    include stdlib
     # include core::yeoman
     include core::curl
     # include core::yeoman
@@ -24,4 +25,5 @@ node default {
     # include site::apache-modules
     include destructor::base
     include destructor::test_1
+    include destructor::test_2
 }
